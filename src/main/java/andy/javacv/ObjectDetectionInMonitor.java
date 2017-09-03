@@ -100,7 +100,8 @@ public class ObjectDetectionInMonitor {
         // We can easily and efficiently access the elements of matrices and images
         // through an Indexer object with the set of get() and put() methods.
         DoubleIndexer Ridx = randomR.createIndexer(), axisIdx = randomAxis.createIndexer();
-        axisIdx.put(0, (Math.random() - 0.5) / 4, (Math.random() - 0.5) / 4, (Math.random() - 0.5) / 4);
+        // 注释掉下面这行，可以去除截屏的3d转换效果
+        //axisIdx.put(0, (Math.random() - 0.5) / 4, (Math.random() - 0.5) / 4, (Math.random() - 0.5) / 4);
         cvRodrigues2(randomAxis, randomR, null);
         double f = (width + height) / 2.0;
         Ridx.put(0, 2, Ridx.get(0, 2) * f);
