@@ -16,6 +16,7 @@ import static org.bytedeco.javacpp.opencv_calib3d.*;
 import static org.bytedeco.javacpp.opencv_objdetect.*;
 
 /**
+ * 视频监控对象识别并保存为avi
  * 2017-09-03
  * 例子来源 : https://github.com/andy-zhang-guohua/javacv Demo，
  * 问题1 : Exception in thread "main" org.bytedeco.javacv.FrameGrabber$Exception: videoInput.getPixels() Error: Could not get pixels.
@@ -25,6 +26,8 @@ import static org.bytedeco.javacpp.opencv_objdetect.*;
  * 来源 ： https://github.com/sagioto/LipReading/issues/15
  * grabber = VideoInputFrameGrabber.createDefault(0); 一句替换成 :
  * grabber = new OpenCVFrameGrabber(0);
+ *
+ * 问题2 ： 该程序不是很稳定，过一段时间会自动出错。已经确定不是 recorder 的原因，其他原因未明
  */
 public class ObjectDetectionInMonitor {
     public static void main(String[] args) throws Exception {
