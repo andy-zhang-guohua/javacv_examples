@@ -22,7 +22,7 @@ import static org.bytedeco.javacpp.opencv_imgproc.*;
 @Slf4j
 public class LoadImageAndDetectContours {
     public static void main(String[] args) throws Throwable {
-        String filename = SystemUtils.USER_DIR + "\\pictures\\casino.png";
+        String filename = SystemUtils.USER_DIR + "\\pictures\\sea.jpg";
         // cvLoadImage 目前不支持包含非ASCII字符的路径
         opencv_core.IplImage image = cvLoadImage(filename);
         if (image == null) {
@@ -49,13 +49,13 @@ public class LoadImageAndDetectContours {
         while (contour != null && !contour.isNull()) {
             if (contour.elem_size() > 0) {
                 opencv_core.CvSeq points = cvApproxPoly(contour, Loader.sizeof(opencv_core.CvContour.class), storage, CV_POLY_APPROX_DP, cvContourPerimeter(contour) * 0.02, 0);
-                cvDrawContours(grayImage, points, opencv_core.CvScalar.BLUE, opencv_core.CvScalar.BLUE, -1, 1, CV_AA);
+                cvDrawContours(image, points, opencv_core.CvScalar.BLUE, opencv_core.CvScalar.BLUE, -1, 1, CV_AA);
             }
             contour = contour.h_next();
         }
 
 
-        BufferedImage bufferedImage = toBufferedImage(grayImage);
+        BufferedImage bufferedImage = toBufferedImage(image);
 
         JPanel pane = new JPanel() {
             @Override
