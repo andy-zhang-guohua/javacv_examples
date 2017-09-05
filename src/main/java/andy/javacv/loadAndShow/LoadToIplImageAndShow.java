@@ -9,7 +9,6 @@ import java.awt.image.BufferedImage;
 
 import static andy.javacv.loadAndShow.LoadAndShowCommon.buildFrame;
 import static andy.javacv.loadAndShow.LoadAndShowCommon.toBufferedImage;
-import static andy.javacv.utils.ConversionUtils.toIplImage;
 import static org.bytedeco.javacpp.opencv_core.IplImage;
 import static org.bytedeco.javacpp.opencv_imgcodecs.cvLoadImage;
 
