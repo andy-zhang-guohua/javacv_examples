@@ -15,6 +15,9 @@ import static org.bytedeco.javacpp.opencv_imgcodecs.*;
 import static org.bytedeco.javacpp.opencv_imgproc.*;
 
 /**
+ * 模板匹配样例，来源 : https://github.com/bytedeco/javacv/blob/master/samples/TemplateMatching.java
+ * 基于 Mat 的代码例子，和基于 IplImage  的代码例子
+ *
  * Created by ZhangGuohua on 2017/9/7.
  */
 
