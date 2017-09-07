@@ -28,7 +28,7 @@ public class TemplateMatchingUtils {
      * @param pattern
      * @return
      */
-    static Pair<Pair<Integer, Integer>, Double> findMostMatchingSubImage(String bg, String pattern) {
+   public static Pair<Pair<Integer, Integer>, Double> findMostMatchingSubImage(String bg, String pattern) {
         opencv_core.Mat sourceColor = imread(bg);
         opencv_core.Mat sourceGrey = new opencv_core.Mat(sourceColor.size(), CV_8UC1);
         cvtColor(sourceColor, sourceGrey, COLOR_BGR2GRAY);
