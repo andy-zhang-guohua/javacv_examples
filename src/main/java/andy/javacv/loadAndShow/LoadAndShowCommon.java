@@ -10,7 +10,7 @@ import javax.swing.*;
  */
 @Slf4j
 public class LoadAndShowCommon extends andy.javacv.utils.ConversionUtils {
-    protected static JFrame buildFrame(int width, int height) {
+    public static JFrame buildFrame(int width, int height) {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(width, height);
