@@ -15,19 +15,19 @@ import static org.bytedeco.javacpp.opencv_imgcodecs.*;
 import static org.bytedeco.javacpp.opencv_imgproc.*;
 
 /**
- * 模板匹配样例，来源 : https://github.com/bytedeco/javacv/blob/master/samples/TemplateMatching.java
+ * 模板匹配样例，修改自 : https://github.com/bytedeco/javacv/blob/master/samples/TemplateMatching.java
  * 基于 Mat 的代码例子，和基于 IplImage  的代码例子
- *
+ * <p/>
  * Created by ZhangGuohua on 2017/9/7.
  */
 
 /**
- * Example of template javacv (opencv) template matching using the last java build
- * <p/>
- * We need 2 default parameters like this (source image, image to find )
- * "C:\Users\Waldema\Desktop\bg.jpg" "C:\Users\Waldema\Desktop\imageToFind.jpg"
- *
- * @author Waldemar Neto
+ * 　CV_TM_SQDIFF 平方差匹配法：该方法采用平方差来进行匹配；最好的匹配值为0；匹配越差，匹配值越大。
+ * 　CV_TM_CCORR 相关匹配法：该方法采用乘法操作；数值越大表明匹配程度越好。
+ * 　CV_TM_CCOEFF 相关系数匹配法：1表示完美的匹配；-1表示最差的匹配。
+ * 　CV_TM_SQDIFF_NORMED 归一化平方差匹配法
+ * 　CV_TM_CCORR_NORMED 归一化相关匹配法
+ * 　CV_TM_CCOEFF_NORMED 归一化相关系数匹配法
  */
 public class TemplateMatching {
 
